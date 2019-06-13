@@ -1,0 +1,15 @@
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\MeetUp.DAL.dll.config
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\MeetUp.DAL.dll
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\MeetUp.DAL.pdb
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\EntityFramework.dll
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\MeetUp.Entity.dll
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\MeetUp.Entity.pdb
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\MeetUp.Entity.dll.config
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\EntityFramework.xml
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\obj\Debug\MeetUp.DAL.csprojAssemblyReference.cache
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\obj\Debug\MeetUp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\obj\Debug\MeetUp.DAL.csproj.CopyComplete
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\obj\Debug\MeetUp.DAL.dll
+C:\Users\busra\source\repos\MeetUp.WEBUI\MeetUp.DAL\obj\Debug\MeetUp.DAL.pdb

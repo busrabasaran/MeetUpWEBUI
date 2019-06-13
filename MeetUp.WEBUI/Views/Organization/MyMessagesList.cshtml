@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MeetUp.Entity.Messages>
+
+@{
+    ViewBag.Title = "MyMessagesList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Messages List</h2>
+
+<p>
+    @Html.ActionLink("Create New Message", "SendMessage")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Gönderici")
+        </th>
+        <th>
+            @Html.DisplayName("Alıcı")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Users.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Users1.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Answer", "MessageAnswer", new { @id = item.MessageID })
+            @Html.ActionLink("Delete", "MessageDelete", new { @id = item.MessageID })
+        </td>
+    </tr>
+}
+
+</table>

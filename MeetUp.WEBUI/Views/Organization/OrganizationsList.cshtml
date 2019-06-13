@@ -1,0 +1,33 @@
+﻿@using MeetUp.Entity
+@model List<Organizations>
+
+@{
+    ViewBag.Title = "OrganizationsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+@*@Html.ActionLink("Create New", "Create")*@
+<a href="/Organization/AddOrganization" class="btn btn-primary">Create New Event</a>
+
+<h2>Organizations List</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (Organizations item in Model)
+        {
+            <div class="col-sm-6">
+                <div>
+                    <div>
+                        <img style="width:300px;height:300px" src="@item.Image">
+                        <h5 class="card-title">@item.Place / @item.OrganizationName</h5>
+                        <p class="card-text">@item.Date</p>
+                        <a href="/Organization/OrganizationDetail/@item.OrganizationID" class="btn btn-primary">Detay</a>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

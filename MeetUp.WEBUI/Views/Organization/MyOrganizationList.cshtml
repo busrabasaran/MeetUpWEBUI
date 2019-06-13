@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MeetUp.Entity.Participants>
+
+@{
+    ViewBag.Title = "MyOrganizationList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Organizations List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "OrganizationsList")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organizations.OrganizationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organizations.Place)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organizations.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberofPeople)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganizationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organizations.OrganizationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organizations.Place)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organizations.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberofPeople)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "ParticipantOrganizationUpdate", new { @id = item.ParticipantID }) |
+            @Html.ActionLink("Delete", "ParticipantOrganizationDelete", new { @id = item.ParticipantID })
+        </td>
+    </tr>
+}
+
+</table>

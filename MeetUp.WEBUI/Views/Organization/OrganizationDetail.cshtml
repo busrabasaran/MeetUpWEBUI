@@ -1,0 +1,109 @@
+﻿@using MeetUp.WEBUI.Models
+@model OrganizationParticipantModel
+
+@{
+    ViewBag.Title = "OrganizationDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Organization Detail</h2>
+
+<div>
+    <a href="/Organization/OrganizationsList" class="btn btn-primary">Back to Organizations</a>
+    <hr />
+
+    <div>
+        @Html.ActionLink("Participants of Organization", "ParticipantList")
+    </div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(x => x.organizations.OrganizationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.organizations.OrganizationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.organizations.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.organizations.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.organizations.Place)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.organizations.Place)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.organizations.ApplicationStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.organizations.ApplicationStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(x => x.organizations.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(x => x.organizations.Details)
+        </dd>
+    </dl>
+
+
+    @*<div class="container">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Send a Message</button>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-6">
+                            <div>
+                                <div>
+                                    <p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+   
+    <a href="/Organization/SendMessage" class="btn btn-primary">Send Message</a>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                @using (Html.BeginForm("JoınOrganizations", "Organization", FormMethod.Post))
+                {
+                    <div class="modal-body">
+                        @Html.HiddenFor(x => x.organizations.OrganizationID)
+                        <label><b>Number of applicant</b></label>
+                        @Html.TextBoxFor(x => x.ParticipantNumber, new { @class = "form-control", type = "number" })
+                        <button class="btn btn-success" type="submit">Joın</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
